@@ -4,9 +4,9 @@ const Project = require("../models/Project.model.js")
 
 // CREATE a new project
 router.post("/projects", (req, res, next) => {
-    const { name, description, language } = req.body
+    const { name, description, language, gitUrl, deployedUrl } = req.body
 
-    Work.create({ name, description, language, gitUrl, deployedUrl })
+    Project.create({ name, description, language, gitUrl, deployedUrl })
         .then ((newProject) =>
         res.status(200).json(newProject))
         .catch((err) =>

@@ -4,7 +4,8 @@ const workSchema = new Schema(
     {
         name: {
             type: String,
-            required: true
+            required: true,
+            unique: true
         },
         description: {
             type: String,
@@ -16,10 +17,7 @@ const workSchema = new Schema(
             type: String,
             required: true
         },
-        tags: {
-            type: [String],
-            required: true
-        }
+        tags: [String]
     }
 )
 

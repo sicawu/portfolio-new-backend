@@ -1,6 +1,6 @@
 const router = require("express").Router()
 const mongoose = require("mongoose")
-const Work = require("../models/Project.model.js")
+const Work = require("../models/Work.model.js")
 
 // CREATE a new work experience
 router.post("/work", (req, res, next) => {
