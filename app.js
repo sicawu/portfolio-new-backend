@@ -1,3 +1,6 @@
+const cors = require("cors")
+const originUrl = process.env.ORIGIN || "http://localhost:5173";
+
 // ℹ️ Gets access to environment variables/settings
 // https://www.npmjs.com/package/dotenv
 require("dotenv").config()
@@ -10,6 +13,13 @@ require("./db")
 const express = require("express")
 
 const app = express()
+
+// CORS Setup - To allow requests from Frontend
+app.use(
+    cors({
+      origin: [originUrl],
+    })
+  )
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require("./config")(app)
