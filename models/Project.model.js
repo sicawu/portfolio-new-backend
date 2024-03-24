@@ -13,7 +13,9 @@ const projectSchema = new Schema(
         language: {
             type: [String],
             required: true
-        }
+        },
+        gitUrl: String,
+        deployedUrl: String
     }
 )
 
