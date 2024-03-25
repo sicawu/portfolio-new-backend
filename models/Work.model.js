@@ -5,18 +5,17 @@ const workSchema = new Schema(
         name: {
             type: String,
             required: true,
-            unique: true
         },
         description: {
             type: String,
             required: true
         },
-        startDate: Date,
-        endDate: Date,
+        date: String,
         location: {
             type: String,
             required: true
         },
+        company: String,
         tags: [String]
     }
 )
