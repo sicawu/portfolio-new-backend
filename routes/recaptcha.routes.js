@@ -2,7 +2,7 @@ const router = require("express").Router()
 const axios = require('axios')
 const nodemailer = require('nodemailer')
 
-
+// Auth with mail provider
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
     }
 })
 
-
+// POST
 router.post('/submit-form', async (req, res) => {
     const { recaptcha, name, mail, message } = req.body;
 
