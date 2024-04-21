@@ -1,6 +1,7 @@
 {
     "event": {
       "token": "TOKEN",
-      "siteKey": "6LeFQsEpAAAAAB881O_XZ6f2DjSbdMzCvZ8WtHmw",
+      "expectedAction": "SENDMAIL",
+      "siteKey": "6LdcR8IpAAAAABzKK4Q32ZtQ_-PWo4d_9AHpxnO_"
     }
   }
