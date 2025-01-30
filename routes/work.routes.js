@@ -7,8 +7,8 @@ router.post("/work", (req, res, next) => {
     const { name, description, date, location, company, tags } = req.body
 
     Work.create({ name, description, date, location, company, tags })
-        .then ((newWork) =>
-        res.status(200).json(newWork))
+        .then((newWork) =>
+            res.status(200).json(newWork))
         .catch((err) =>
             next(err))
 })
@@ -17,6 +17,7 @@ router.post("/work", (req, res, next) => {
 // READ all work experiences
 router.get("/work", (req, res, next) => {
     Work.find()
+        .sort({ order: -1 })
         .then((allWork) =>
             res.status(200).json(allWork))
         .catch((err) =>

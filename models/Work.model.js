@@ -16,7 +16,11 @@ const workSchema = new Schema(
             required: true
         },
         company: String,
-        tags: [String]
+        tags: [String],
+        order: {
+            type: Number,
+            required: true
+        }
     }
 )
 
